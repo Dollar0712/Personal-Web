@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="content">
+        <div class="menu-box">
+            <input type="checkbox" id="menu-btn">
+            <div class="menu">
+            
+                <!-- 每一项导航 -->
+                <div class="menu-item">
+                    <input type="checkbox" id="menu-item1">
+                    <label for="menu-item1">
+                        <span>Home</span>
+                    </label>
+                </div>
+
+                <div class="menu-item">
+                    <input type="checkbox" id="menu-item2">
+                    <label for="menu-item2">
+                        <span>About me</span>
+                        <i><img src="../icon/chevron-arrow-down.png" alt="drop down arrow" style="width: 16px; height: 16px;"></i>
+
+                    </label>
+                    <div class="menu-content">
+                        <span>About myself</span>
+                        <span>Educational background</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <input type="checkbox" id="menu-item3">
+                    <label for="menu-item3">
+                        <span>Skills</span>
+                        <i><img src="../icon/chevron-arrow-down.png" alt="drop down arrow" style="width: 16px; height: 16px;"></i>
+                    
+                    </label>
+                    <div class="menu-content">
+                        <span>Programming languages </span>
+                        <span>Microcontroller and processor</span>
+                        <span>Operating system</span>
+                        <span>Interfaces and protocols</span>
+                        <span>Development tools</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <input type="checkbox" id="menu-item4">
+                    <label for="menu-item4">
+                        <span>Experience</span>
+                    </label>
+                </div>
+
+                <div class="set-line"></div>
+
+                <div class="menu-item">
+                    <input type="checkbox" id="menu-item5">
+                    <label for="menu-item5">
+                        <span>Contact Me</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="home" style="display: flex;">
+            <div class="profile-image"></div>
+            <div class="profile-info">
+                <h1>Kaipeng Zhang</h1>
+                <p>Firmware and software for embedded system</p>
+                <div class="buttons">
+                    <button>Learn More</button>
+                    <button>Contact Me</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-me" style="display: none;">
+            <h1>about me</h1>
+        </div>
+
+        <div class="skill" style="display: none;">
+            <h1>skills</h1>
+        </div>
+
+        <div class="experience" style="display: none;">
+            <h1>experience</h1>
+        </div>
+
+        <div class="contact-me" style="display: none;">
+            <h1>contact me</h1>
+        </div>
+    </div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var homecheckbox = document.getElementById('menu-item1');
+            var homeContent = document.querySelector('.home'); 
+            
+            var aboutcheckbox = document.getElementById('menu-item2');
+            var aboutContent = document.querySelector('.about-me'); 
+
+            var skillcheckbox = document.getElementById('menu-item3');
+            var skillContent = document.querySelector('.skill'); 
+
+            var experiencecheckbox = document.getElementById('menu-item4');
+            var experienceContent = document.querySelector('.experience'); 
+
+            var contactcheckbox = document.getElementById('menu-item5');
+            var contactContent = document.querySelector('.contact-me'); 
+
+            function hideAllContent() {
+                homeContent.style.display = 'none';
+                aboutContent.style.display = 'none';
+                skillContent.style.display = 'none';
+                experienceContent.style.display = 'none';
+                contactContent.style.display = 'none';
+            }
+
+            homecheckbox.addEventListener('change', function() {
+                if (this.checked) {
+
+                    hideAllContent();
+                    homeContent.style.display = 'flex';
+                }
+            });
+
+            aboutcheckbox.addEventListener('change', function() {
+                if (this.checked) {
+
+                    hideAllContent();
+                    aboutContent.style.display = 'flex';
+                }
+            });
+
+            skillcheckbox.addEventListener('change', function() {
+                if (this.checked) {
+
+                    hideAllContent();
+                    skillContent.style.display = 'flex';
+                }
+            });
+
+            experiencecheckbox.addEventListener('change', function() {
+                if (this.checked) {
+
+                    hideAllContent();
+                    experienceContent.style.display = 'flex';
+                }
+            });
+
+            contactcheckbox.addEventListener('change', function() {
+                if (this.checked) {
+
+                    hideAllContent();
+                    contactContent.style.display = 'flex';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
