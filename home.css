@@ -1,0 +1,70 @@
+.home {
+    flex-grow: 1;
+    flex-direction: column;
+
+    /* Centres all sub elements */
+    align-items: center; 
+
+    /* Vertically centre*/
+    justify-content: center; 
+
+    min-height: 100vh;
+    background: #fff;
+    color: #111827;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url('potrait.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.profile-info {
+    display: flex;
+
+    /* Sub-elements vertically aligned */
+    flex-direction: column; 
+
+    /* Horizontal centred sub elements */
+    align-items: center; 
+
+    /* Text central alignment */
+    text-align: center; 
+}
+
+.profile-info h1 {
+    margin-bottom: 40px; 
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.profile-info p {
+    width: 700px;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.home .buttons button {
+    padding: 15px 40px;
+    margin-right: 150px;
+    border: none;
+    background-color: #111827;
+    color: #F0F0F0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.home .buttons button:last-child {
+    margin-right: 0;
+}
+
+.home .buttons button:hover {
+    background-color: #0056b3;
+}
