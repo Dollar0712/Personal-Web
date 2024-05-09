@@ -1,0 +1,72 @@
+.experience {
+    flex-grow: 1;
+    flex-direction: column;
+
+    /* Centres all sub elements */
+    align-items: center; 
+
+    /* Vertically centre*/
+    justify-content: center; 
+
+    min-height: 100vh;
+    background: #fff;
+    color: #111827;
+}
+
+.experience .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 90%;
+    margin-left: 20px;
+}
+
+.experience h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-top: 5%;
+}
+
+.experience h2 {
+    text-decoration: underline;
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 3%;
+}
+
+.paragraph li {
+    margin-left: 3%;
+}
+
+.paragraph {
+    border: 2px solid #111827;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: justify;
+
+    font-size: 32px;
+    width: 85%;
+
+    margin-bottom: 3%;
+}
+
+.experience .buttons button {
+    padding: 15px;
+    margin-bottom: 3%;
+    margin-right: 150px;
+    border: none;
+    background-color: #111827;
+    color: #F0F0F0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    width: 200px;
+}
+
+.experience .buttons button:last-child {
+    margin-right: 0;
+}
+
+.experience .buttons button:hover {
+    background-color: #0056b3;
+}
