@@ -1,71 +1,117 @@
 .experience {
     flex-grow: 1;
+
     flex-direction: column;
+
+    min-height: 270vh;
+
+    background: #fff;
+    color: #111827;
 
     /* Centres all sub elements */
     align-items: center; 
-
-    /* Vertically centre*/
-    justify-content: center; 
-
-    min-height: 100vh;
-    background: #fff;
-    color: #111827;
 }
 
-.experience .content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 90%;
-    margin-left: 20px;
-}
-
-.experience h1 {
-    font-size: 64px;
+.experience .title h1 {
+    font-size: 3.363vw;
     font-weight: 700;
     margin-top: 5%;
 }
 
-.experience h2 {
-    text-decoration: underline;
-    font-size: 64px;
-    font-weight: 600;
-    margin-bottom: 3%;
+.experience .content-box {
+    max-width: 100%;
+    margin-left: 1.576vw;
+    margin-right: 1.576vw;
 }
 
-.paragraph li {
+.experience .content-box h2 {
+    text-align: left;
+    text-decoration: underline;
+    font-size: 3.363vw;
+    font-weight: 600;
+    margin-bottom: 1.051vw;
+}
+
+.experience .content-box .paragraph {
+    border: 0.105vw solid #111827;
+    padding: 1.051vw;
+    border-radius: 0.631vw;
+    text-align: justify;
+    
+    font-size: 1.682vw;
+    width: 68.313vw;
+    
+    margin-bottom: 2%;
+}
+
+.experience .content-box .paragraph li {
     margin-left: 3%;
 }
 
-.paragraph {
-    border: 2px solid #111827;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: justify;
+.experience .video-player {
+    width: 70.415vw;
+    height: 36.784vw;
+    background-color: #111827;
 
-    font-size: 32px;
-    width: 85%;
+    border: 0.105vw solid #111827;
+    border-radius: 0.631vw;
 
     margin-bottom: 3%;
 }
 
+.experience .mini-dyno-image {
+    display: flex;
+    flex-direction: row;
+    width: 70.415vw;
+    justify-content: flex-end;
+
+}
+
+#mini-dyno-image-1 {
+    width: calc(69vw * 0.7);
+    height: 26.274vw;
+    background-image: url('mini-dyno-image-1.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #111827;
+    border: 0.105vw solid #111827;
+    border-radius: 0.631vw;
+}
+
+#mini-dyno-video-player {
+    width: calc(69vw * 0.3);
+    height: 26.274vw;
+    background-color: #111827;
+    border: 0.105vw solid #111827;
+    border-radius: 0.631vw;
+    margin-left: auto;
+}
+
+.experience .buttons {
+    display: flex;
+    width: 70.415vw;
+    margin-top: auto;
+    justify-content: flex-end;
+}
+
 .experience .buttons button {
-    padding: 15px;
+    padding: 0.788vw;
     margin-bottom: 3%;
-    margin-right: 150px;
+    margin-right: 1.576vw;
     border: none;
     background-color: #111827;
     color: #F0F0F0;
-    border-radius: 5px;
+    border-radius: 0.631vw;
     cursor: pointer;
-    font-size: 24px;
-    width: 200px;
+    font-size: 1.261vw;
+    width: 10.51vw;
 }
 
 .experience .buttons button:last-child {
     margin-right: 0;
 }
+
 
 .experience .buttons button:hover {
     background-color: #0056b3;

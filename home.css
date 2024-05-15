@@ -1,11 +1,10 @@
 .home {
     flex-grow: 1;
+
     flex-direction: column;
 
-    /* Centres all sub elements */
-    align-items: center; 
+    align-items: center;
 
-    /* Vertically centre*/
     justify-content: center; 
 
     min-height: 100vh;
@@ -14,52 +13,42 @@
 }
 
 .profile-image {
-    width: 300px;
-    height: 300px;
+    width: 15.765vw;
+    height: 15.765vw;
     border-radius: 50%;
     background-image: url('potrait.jpg');
     background-size: cover;
     background-position: center;
-    margin-bottom: 40px;
+    margin-bottom: 2.102vw;
     display: block;
 }
 
 .profile-info {
-    display: flex;
-
-    /* Sub-elements vertically aligned */
-    flex-direction: column; 
-
-    /* Horizontal centred sub elements */
-    align-items: center; 
-
-    /* Text central alignment */
     text-align: center; 
-}
+} 
 
 .profile-info h1 {
-    margin-bottom: 40px; 
-    font-size: 64px;
+    margin-bottom: 2.102vw; 
+    font-size: 3.363vw;
     font-weight: 700;
 }
 
 .profile-info p {
-    width: 700px;
-    margin-bottom: 20px;
-    font-size: 48px;
+    width: 36.784vw;
+    margin-bottom: 1.051vw;
+    font-size: 2.522vw;
     font-weight: 300;
 }
 
 .home .buttons button {
-    padding: 15px 40px;
-    margin-right: 150px;
+    padding: 0.788vw 2.102vw;
+    margin-right: 7.882vw;
     border: none;
     background-color: #111827;
     color: #F0F0F0;
-    border-radius: 12px;
+    border-radius: 0.631vw;
     cursor: pointer;
-    font-size: 24px;
-    
+    font-size: 1.261vw;
 }
 
 .home .buttons button:last-child {

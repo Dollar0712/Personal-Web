@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kaipeng Zhang's website</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
@@ -28,7 +28,9 @@
                     <input type="checkbox" id="menu-item2">
                     <label for="menu-item2">
                         <span>About me</span>
-                        <i><img src="../icons/chevron-arrow-down.png" alt="drop down arrow" style="width: 16px; height: 16px;"></i>
+                        <i>
+                            <img src="./icons/chevron-arrow-down.png" alt="drop down arrow" style="width: 0.841vw; height: 0.841vw;">
+                        </i>
 
                     </label>
                     <div class="menu-content">
@@ -41,7 +43,9 @@
                     <input type="checkbox" id="menu-item3">
                     <label for="menu-item3">
                         <span>Skills</span>
-                        <i><img src="../icons/chevron-arrow-down.png" alt="drop down arrow" style="width: 16px; height: 16px;"></i>
+                        <i>
+                            <img src="./icons/chevron-arrow-down.png" alt="drop down arrow" style="width: 0.841vw; height: 0.841vw;">
+                        </i>
                     
                     </label>
                     <div class="menu-content">
@@ -71,7 +75,7 @@
             </div>
         </div>
 
-        <div class="home" style="display: flex;">
+        <div class="home" style="display: none;">
             <div class="profile-image"></div>
             <div class="profile-info">
                 <h1>Kaipeng Zhang</h1>
@@ -84,20 +88,24 @@
         </div>
 
         <div class="about-me" style="display: none;">
-            <h1>Kaipeng Zhang</h1>
+            <div class="title">
+                <h1>Kaipeng Zhang</h1>
+            </div>
 
-            <div class="content">
-                <h2>About myself</h2>
-                <div>
-                    <p class="paragraph">I am an enthusiastic <b>software engineer</b> with deep skills in programming languages including <b>C/C++</b>, <b>Java</b> and <b>Python</b>, and I have extensive project experience in embedded software development, such as the successful development of the ESP32-based 2D Cartesian-coordinate utility meter-recognition robot "EnergyBot ", and "Mini-Dyno", a lab dynamometer using Raspberry Pi Pico. These projects not only sharpened my technical skills, but also enhanced my teamwork and leadership skills, such as being the <b>team leader</b> of a medical online booking website project and leading the team to deliver the project successfully.
+            <div class="content-box">
+                <h2 id="about-myself">About myself</h2>
+                <div class="paragraph">
+                    <p >I am an enthusiastic <b>software engineer</b> with deep skills in programming languages including <b>C/C++</b>, <b>Java</b> and <b>Python</b>, and I have extensive project experience in embedded software development, such as the successful development of the ESP32-based 2D Cartesian-coordinate utility meter-recognition robot "EnergyBot ", and "Mini-Dyno", a lab dynamometer using Raspberry Pi Pico. These projects not only sharpened my technical skills, but also enhanced my teamwork and leadership skills, such as being the <b>team leader</b> of a medical online booking website project and leading the team to deliver the project successfully.
                     </p>
                 </div>
-
-                <h2>Educational background</h2>
+            </div>
+            
+            <div class="content-box">
+                <h2 id="edu-background">Educational background</h2>
                 <div class="paragraph">
                     <h3>The University of Queensland</h3>
                     <h5>Feb 2019 – Present</h5>
-                    <p>Bachelor of Engineering (Hons)/Master of Software Engineering</p>
+                    <p>Bachelor of Engineering (Hons)/Master of Software Engineering</p>     
                 </div>
             </div>
 
@@ -108,33 +116,75 @@
         </div>
 
         <div class="skill" style="display: none;">
-            <h1>skills</h1>
+            <div class="title">
+                <h1>Skills</h1>
+            </div>
+
+
+
         </div>
 
-        <div class="experience" style="display: none;">
-            <h1>Industrial Experiences</h1>
-
-            <div class="content">
-                <h2>EnergyBot</h2>
+        <div class="experience" style="display: flex;">
+            <div class="title">
+                <h1>Industrial Experiences</h1>
+            </div>
+            <div class="content-box">
+                <h2 id="energyBot">EnergyBot</h2>
                 <div class="paragraph">
-                    <ul id="energybot-item">
-                        <li>Utilizing the ESP32 series, a 2D Cartesian Coordinate Utility Meter Recognition Robot "EnergyBot" has been developed and accomplished movement accuracy of 0.01 system unit. </li>
-                        <li>Engaged in software development process, covering 4+ phases from conceptual design to final testing.</li>
-                        <li>Applied LoRa protocol, making "EnergyBot" have the ability to transfer data wirelessly within 1000 meters. </li>
-                        <li>Integrated an edge computing open-source project "Ai-on-the-edge-devices" based on UART and REST API and achieved 90% pattern recognition accuracy.</li>
-                        <li>Collaborated with another intern to design a stable cloud-based data transfer for the project, reaching a 90% data transfer success rate.</li>
+                    <ul>
+                        <li>
+                            Utilizing the ESP32 series, a 2D Cartesian Coordinate Utility Meter Recognition Robot "EnergyBot" has been developed and accomplished movement accuracy of 0.01 system unit. 
+                        </li>
+                        <li>
+                            Engaged in software development process, covering 4+ phases from conceptual design to final testing.
+                        </li>
+                        <li>
+                            Applied LoRa protocol, making "EnergyBot" have the ability to transfer data wirelessly within 1000 meters. 
+                        </li>
+                        <li>
+                            Integrated an edge computing open-source project "Ai-on-the-edge-devices" based on UART and REST API and achieved 90% pattern recognition accuracy.
+                        </li>
+                        <li>
+                            Collaborated with another intern to design a stable cloud-based data transfer for the project, reaching a 90% data transfer success rate.
+                        </li>
                     </ul>
                 </div>
-
+            </div>
+                
+            <video class="video-player" preload="metadata" src="./Energybot.mp4" controls autoplay loop muted>
+                <source src="./Energybot.mp4", type="video/mp4">
+                <source src="./Energybot.ogg" type="video/ogg">
+            </video>
+            
+            <div class="content-box">
                 <h2>Mini-Dyno</h2>
                 <div class="paragraph">
+                    <ul>
+                        <li>
+                            Utilizing Raspberry Pi Pico, and various protocol converters, a simplified version of a laboratory dynamometer "Mini-Dyno" has been developed and accomplished the ability to characterize, test, and fine-tune motors and propulsion systems.
+                        </li>
+                        <li>
+                            Leverage OpenCyphal technology (via CAN bus) and Modbus, the cost has been decreased by 40% while maintaining the 95% original performance.
+                        </li>
+                    </ul>
                 </div>
+            </div>
+
+            <div class="mini-dyno-image">
+                <div id="mini-dyno-image-1">
+
+                </div>
+                <video id="mini-dyno-video-player" preload="metadata" src="./mini-dyno.mp4" controls autoplay loop muted>
+                    <source src="./mini-dyno.mp4", type="video/mp4">
+                    <source src="./mini-dyno.ogg" type="video/ogg">
+                </video>
             </div>
 
             <div class="buttons">
-                <button onclick="toSkill()">Next: Skills</button>
-                <button onclick="toHome()">Back</button>
+                <button onclick="toContact()">Next: Contact</button>
+                <button onclick="toSkill()">Back</button>
             </div>
+
         </div>
 
         <div class="contact-me" style="display: none;">
@@ -144,7 +194,7 @@
     
 
     <script>
-
+        document.body.style.zoom="100%";
         var homecheckbox = document.getElementById('menu-item1');
         var homeContent = document.querySelector('.home'); 
         
