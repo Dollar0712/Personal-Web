@@ -1,0 +1,130 @@
+.skills {
+    flex-grow: 1;
+
+    flex-direction: column;
+
+    min-height: 370vh;
+
+    background: #fff;
+    color: #111827;
+
+    /* Centres all sub elements */
+    align-items: center; 
+}
+
+.skills .title h1 {
+    font-size: 3.363vw;
+    font-weight: 700;
+    margin-top: 5%;
+}
+
+.skills .cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills .cards .item {
+    height: 568px;
+    width: 593px;
+    position: relative;
+    perspective: 1000px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.skills .cards .item .front, .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.skills .cards .item .front {
+    background-color: #111827;
+    transform:  rotateY(0deg);
+    transition: transform var(--transition-menu-time);
+
+    border: 0.105vw solid #111827;
+    border-radius: 0.631vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills .cards .item:hover .front {
+    transform:  rotateY(180deg);
+    transition: transform var(--transition-menu-time);
+}
+
+.skills .cards .item .front h3 {
+    color: #F0F0F0;
+    font-size: 32px;
+    font-weight: 700;
+    width: 60%;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.skills .cards .item .back {
+    background-color: #111827;
+    transform:  rotateY(-180deg);
+    transition: transform var(--transition-menu-time);
+
+    border: 0.105vw solid #111827;
+    border-radius: 0.631vw;
+}
+
+.skills .cards .item:hover .back {
+    transform:  rotateY(0deg);
+    transition: transform var(--transition-menu-time);
+}
+
+.skills .cards .item .back h3 {
+    color: #F0F0F0;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.skills .cards .item .back li {
+    color: #F0F0F0;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+.skills .buttons {
+    display: flex;
+    width: 70.415vw;
+    margin-top: auto;
+    justify-content: flex-end;
+}
+
+.skills .buttons button {
+    padding: 0.788vw;
+    margin-bottom: 3%;
+    margin-right: 1.576vw;
+    border: none;
+    background-color: #111827;
+    color: #F0F0F0;
+    border-radius: 0.631vw;
+    cursor: pointer;
+    font-size: 1.261vw;
+    width: 10.51vw;
+}
+
+.skills .buttons button:last-child {
+    margin-right: 0;
+}
+
+
+.skills .buttons button:hover {
+    background-color: #0056b3;
+}
