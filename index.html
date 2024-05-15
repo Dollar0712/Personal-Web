@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="about-me.css">
+    <link rel="stylesheet" href="experience.css ">
 </head>
 <body>
     <div class="content">
@@ -27,7 +28,7 @@
                     <input type="checkbox" id="menu-item2">
                     <label for="menu-item2">
                         <span>About me</span>
-                        <i><img src="../icon/chevron-arrow-down.png" alt="drop down arrow" style="width: 16px; height: 16px;"></i>
+                        <i><img src="../icons/chevron-arrow-down.png" alt="drop down arrow" style="width: 16px; height: 16px;"></i>
 
                     </label>
                     <div class="menu-content">
@@ -40,7 +41,7 @@
                     <input type="checkbox" id="menu-item3">
                     <label for="menu-item3">
                         <span>Skills</span>
-                        <i><img src="../icon/chevron-arrow-down.png" alt="drop down arrow" style="width: 16px; height: 16px;"></i>
+                        <i><img src="../icons/chevron-arrow-down.png" alt="drop down arrow" style="width: 16px; height: 16px;"></i>
                     
                     </label>
                     <div class="menu-content">
@@ -64,30 +65,30 @@
                 <div class="menu-item">
                     <input type="checkbox" id="menu-item5">
                     <label for="menu-item5">
-                        <span>Contact Me</span>
+                        <span onchange="toContact()">Contact Me</span>
                     </label>
                 </div>
             </div>
         </div>
 
-        <div class="home" style="display: none;">
+        <div class="home" style="display: flex;">
             <div class="profile-image"></div>
             <div class="profile-info">
                 <h1>Kaipeng Zhang</h1>
                 <p>Firmware and software for embedded system</p>
                 <div class="buttons">
-                    <button>Learn More</button>
-                    <button>Contact Me</button>
+                    <button onclick="toAbout()">Learn More</button>
+                    <button onclick="toContact()">Contact Me</button>
                 </div>
             </div>
         </div>
 
-        <div class="about-me" style="display: flex;">
+        <div class="about-me" style="display: none;">
             <h1>Kaipeng Zhang</h1>
 
             <div class="content">
                 <h2>About myself</h2>
-                <div >
+                <div>
                     <p class="paragraph">I am an enthusiastic <b>software engineer</b> with deep skills in programming languages including <b>C/C++</b>, <b>Java</b> and <b>Python</b>, and I have extensive project experience in embedded software development, such as the successful development of the ESP32-based 2D Cartesian-coordinate utility meter-recognition robot "EnergyBot ", and "Mini-Dyno", a lab dynamometer using Raspberry Pi Pico. These projects not only sharpened my technical skills, but also enhanced my teamwork and leadership skills, such as being the <b>team leader</b> of a medical online booking website project and leading the team to deliver the project successfully.
                     </p>
                 </div>
@@ -101,11 +102,9 @@
             </div>
 
             <div class="buttons">
-                <button>Next: Skills</button>
-                <button>Back</button>
+                <button onclick="toSkill()">Next: Skills</button>
+                <button onclick="toHome()">Back</button>
             </div>
-
-            
         </div>
 
         <div class="skill" style="display: none;">
@@ -113,7 +112,29 @@
         </div>
 
         <div class="experience" style="display: none;">
-            <h1>experience</h1>
+            <h1>Industrial Experiences</h1>
+
+            <div class="content">
+                <h2>EnergyBot</h2>
+                <div class="paragraph">
+                    <ul id="energybot-item">
+                        <li>Utilizing the ESP32 series, a 2D Cartesian Coordinate Utility Meter Recognition Robot "EnergyBot" has been developed and accomplished movement accuracy of 0.01 system unit. </li>
+                        <li>Engaged in software development process, covering 4+ phases from conceptual design to final testing.</li>
+                        <li>Applied LoRa protocol, making "EnergyBot" have the ability to transfer data wirelessly within 1000 meters. </li>
+                        <li>Integrated an edge computing open-source project "Ai-on-the-edge-devices" based on UART and REST API and achieved 90% pattern recognition accuracy.</li>
+                        <li>Collaborated with another intern to design a stable cloud-based data transfer for the project, reaching a 90% data transfer success rate.</li>
+                    </ul>
+                </div>
+
+                <h2>Mini-Dyno</h2>
+                <div class="paragraph">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button onclick="toSkill()">Next: Skills</button>
+                <button onclick="toHome()">Back</button>
+            </div>
         </div>
 
         <div class="contact-me" style="display: none;">
@@ -123,60 +144,79 @@
     
 
     <script>
+
+        var homecheckbox = document.getElementById('menu-item1');
+        var homeContent = document.querySelector('.home'); 
+        
+        var aboutcheckbox = document.getElementById('menu-item2');
+        var aboutContent = document.querySelector('.about-me'); 
+
+        var skillcheckbox = document.getElementById('menu-item3');
+        var skillContent = document.querySelector('.skill'); 
+
+        var experiencecheckbox = document.getElementById('menu-item4');
+        var experienceContent = document.querySelector('.experience'); 
+
+        var contactcheckbox = document.getElementById('menu-item5');
+        var contactContent = document.querySelector('.contact-me'); 
+
+
+        function hideAllContent() {
+            homeContent.style.display = 'none';
+            aboutContent.style.display = 'none';
+            skillContent.style.display = 'none';
+            experienceContent.style.display = 'none';
+            contactContent.style.display = 'none';
+        }
+
+        function toHome() {
+            hideAllContent();
+            homeContent.style.display = 'flex';
+        }
+        
+        function toAbout() {
+            hideAllContent();
+            aboutContent.style.display = 'flex';
+        }
+
+        function toSkill() {
+            hideAllContent();
+            skillContent.style.display = 'flex';
+        }
+
+        function toExperience() {
+            hideAllContent();
+            experienceContent.style.display = 'flex';
+        }
+
+        function toContact() {
+            hideAllContent();
+            contactContent.style.display = 'flex';
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
-            var homecheckbox = document.getElementById('menu-item1');
-            var homeContent = document.querySelector('.home'); 
-            
-            var aboutcheckbox = document.getElementById('menu-item2');
-            var aboutContent = document.querySelector('.about-me'); 
-
-            var skillcheckbox = document.getElementById('menu-item3');
-            var skillContent = document.querySelector('.skill'); 
-
-            var experiencecheckbox = document.getElementById('menu-item4');
-            var experienceContent = document.querySelector('.experience'); 
-
-            var contactcheckbox = document.getElementById('menu-item5');
-            var contactContent = document.querySelector('.contact-me'); 
-
-            function hideAllContent() {
-                homeContent.style.display = 'none';
-                aboutContent.style.display = 'none';
-                skillContent.style.display = 'none';
-                experienceContent.style.display = 'none';
-                contactContent.style.display = 'none';
-            }
 
             homecheckbox.addEventListener('change', function() {
-            
-                hideAllContent();
-                homeContent.style.display = 'flex';
+                toHome();
             });
 
             aboutcheckbox.addEventListener('change', function() {
-                
-                hideAllContent();
-                aboutContent.style.display = 'flex';
+                toAbout();
             });
 
             skillcheckbox.addEventListener('change', function() {
-
-                    hideAllContent();
-                    skillContent.style.display = 'flex';
+                toSkill();
             });
 
             experiencecheckbox.addEventListener('change', function() {
-
-                    hideAllContent();
-                    experienceContent.style.display = 'flex';
+                toExperience();
             });
 
             contactcheckbox.addEventListener('change', function() {
-
-                    hideAllContent();
-                    contactContent.style.display = 'flex';
+                toContact();
             });
         });
+
     </script>
 </body>
 </html>

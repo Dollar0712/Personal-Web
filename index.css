@@ -12,7 +12,7 @@
 
 :root {
     --color-bg: #111827;
-    --color-menu-bg: #111827;
+    --color-menu-bg: #000;
     --font-color-mi: #A0A0AF;
     --font-color-mi-hover: #6DB1FF;
     --color-bg-mi-hover: #111827;
@@ -40,6 +40,7 @@
 }
 
 .menu-box {
+    flex-direction: row;
     letter-spacing: 0.5px;
     font-weight: 600;
     position: relative;
