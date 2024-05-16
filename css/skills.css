@@ -4,6 +4,7 @@
     flex-direction: column;
 
     min-height: 370vh;
+    margin-left: var(--menu-box-width);
 
     background: #fff;
     color: #111827;

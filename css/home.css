@@ -4,7 +4,7 @@
     flex-direction: column;
 
     align-items: center;
-
+    margin-left: var(--menu-box-width);
     justify-content: center; 
 
     min-height: 100vh;
@@ -16,7 +16,7 @@
     width: 15.765vw;
     height: 15.765vw;
     border-radius: 50%;
-    background-image: url('potrait.jpg');
+    background-image: url('../images/potrait.jpg');
     background-size: cover;
     background-position: center;
     margin-bottom: 2.102vw;

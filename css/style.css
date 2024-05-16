@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    background-color: #FFFFFF;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+:root {
+    --color-bg: #111827;
+    --color-menu-bg: #111827;
+    --font-color-mi: #A0A0AF;
+    --font-color-mi-hover: #6DB1FF;
+    --color-bg-mi-hover: #111827;
+    --border-radius-mi: 0.105vw;
+    --transition-menu-time: 0.2s;
+    --menu-box-width: 13.229vw
+}
+
+.menu-box {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 700;
+    position: fixed;
+    width: var(--menu-box-width);
+    height: 100vh;
+    background-color: var(--color-menu-bg);
+    color: var(--font-color-mi);
+    align-items: center;
+}
+
+.menu-box .menu {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+}
+
+.menu-box input[type='checkbox'] {
+    display: none;
+}
+
+.menu-box .menu .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-box .menu .menu-item label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.menu-box .menu .menu-item label i{
+    margin-left: auto;
+}
+
+.menu-box .menu .menu-item label i {
+    font-weight: 900;
+    text-indent: -0.158vw;
+    font-size: 1.051vw;
+    transition: transform var(--transition-menu-time);
+    transform: rotate(0deg);
+}
+
+.menu-box .menu .menu-item label:hover {
+    box-shadow: 0vw 0vw 0.105vw 0vw #000;
+    color: var(--font-color-mi-hover);
+}
+
+.menu-box .menu .menu-item:first-child {
+    margin-top: 100px;
+}
+
+.menu-box .menu .menu-item:nth-last-child(2) {
+    margin-top: auto;
+}
+
+.menu-box .menu .menu-item:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px; /* 图标之间的间距 */
+}
+
+.menu-box .menu .menu-item .logo-container {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    
+    justify-content: center;
+}
+
+.menu-box .menu .menu-item .logo-container .logo {
+    width: 100%; /* 确保图标适当缩小，留出内边距 */
+    height: 100%;
+}
+
+.menu-box .menu .menu-item label .bar {
+    width: 5px; /* 竖条的宽度 */
+    height: 27px; /* 竖条的高度 */
+    background-color: var(--color-menu-bg); /* 默认竖条的颜色 */
+    border-radius: 12px;
+    margin-right: 8px; /* 竖条和文字之间的间距 */
+    transition: background-color var(--transition-menu-time); /* 颜色变化的过渡效果 */
+}
+
+.menu-box .menu .menu-item input[type="checkbox"]:checked+label .bar {
+    background-color: var(--font-color-mi-hover); /* 选中后竖条的颜色 */
+}
+
+.menu-box .menu .menu-item input:checked+label span {
+    color: #6DB1FF;
+}
+
+.menu-box .menu .menu-item input:checked+label i {
+    transform: rotate(180deg);
+}
+
+.menu-box .menu .menu-item .menu-item-content {
+    font-size: 20px;
+    font-weight: 700;
+    align-self: center;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap; 
+    
+    height: 0;
+    overflow: hidden;
+    transition: height var(--transition-menu-time);
+    background-color: var(--color-menu-bg);
+}
+
+.menu-box .menu .menu-item .menu-item-content span {
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-box .menu .menu-item .menu-item-content span:first-child {
+    margin-top: 10px;
+}
+
+.menu-box .menu .menu-item input#menu-item2:checked~.menu-item-content {
+    height: calc(2 * 50px);
+}
+
+.menu-box .menu .menu-item input#menu-item3:checked~.menu-item-content {
+    height: calc(5 * 60px);
+}
+
+
+.menu-item-content span:hover {
+    background-color: var(--color-bg-mi-hover);
+    color: var(--font-color-mi-hover);
+}

@@ -4,6 +4,7 @@
     flex-direction: column;
 
     min-height: 270vh;
+    margin-left: var(--menu-box-width);
 
     background: #fff;
     color: #111827;
@@ -70,7 +71,7 @@
 #mini-dyno-image-1 {
     width: calc(69vw * 0.7);
     height: 26.274vw;
-    background-image: url('mini-dyno-image-1.jpg');
+    background-image: url('../images/mini-dyno-image-1.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

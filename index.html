@@ -7,7 +7,7 @@
     <title>Kaipeng Zhang's website</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/about-me.css">
     <link rel="stylesheet" href="./css/experience.css ">
@@ -19,8 +19,9 @@
         <div class="menu-box">  
             <div class="menu">
                 <div class="menu-item">
-                    <input type="checkbox" id="menu-item1">
+                    <input type="checkbox" id="menu-item1" class="parent-checkbox">
                     <label for="menu-item1">
+                        <span class="bar"></span>
                         <span>
                             Home
                         </span>
@@ -28,49 +29,93 @@
                 </div>
 
                 <div class="menu-item">
-                    <input type="checkbox" id="menu-item2">
+                    <input type="checkbox" id="menu-item2" class="parent-checkbox">
                     <label for="menu-item2">
+                        <span class="bar"></span>
                         <span>About me</span>
                         <i>
-                            <img src="./icons/chevron-arrow-down.png" alt="drop down arrow" style="width: 0.841vw; height: 0.841vw;">
+                            <img src="./images/icons/chevron-arrow-down.png" alt="drop down arrow" style="width: 0.841vw; height: 0.841vw;">
                         </i>
                     </label>
                     <div class="menu-item-content">
-                        <span>About myself</span>
-                        <span>Educational background</span>
+                        <input type="checkbox" id="about-me-item1" class="child-checkbox">
+                        <label for="about-me-item1">
+                            <span>About myself</span>
+                        </label>
+
+                        <input type="checkbox" id="about-me-item2" class="child-checkbox">
+                        <label for="about-me-item2">
+                            <span>Educational background</span>
+                        </label>
+
                     </div>
                 </div>
 
                 <div class="menu-item">
-                    <input type="checkbox" id="menu-item3">
+                    <input type="checkbox" id="menu-item3" class="parent-checkbox">
                     <label for="menu-item3">
+                        <span class="bar"></span>
                         <span>Skills</span>
                         <i>
-                            <img src="./icons/chevron-arrow-down.png" alt="drop down arrow" style="width: 0.841vw; height: 0.841vw;">
+                            <img src="./images/icons/chevron-arrow-down.png" alt="drop down arrow" style="width: 0.841vw; height: 0.841vw;">
                         </i>
                     
                     </label>
                     <div class="menu-item-content">
-                        <span>Programming languages </span>
-                        <span>Microcontroller and processor</span>
-                        <span>Operating system</span>
-                        <span>Interfaces and protocols</span>
-                        <span>Development tools</span>
+                        <input type="checkbox" id="skills-item1" class="child-checkbox">
+                        <label for="skills-item1">
+                            <span>Programming languages </span>
+                        </label>
+
+                        <input type="checkbox" id="skills-item2" class="child-checkbox">
+                        <label for="skills-item2">
+                            <span>Interfaces and protocols</span>
+                        </label>
+                        
+                        <input type="checkbox" id="skills-item3" class="child-checkbox">
+                        <label for="skills-item3">
+                            <span>Development tools</span>
+                        </label>
+                        
+                        <input type="checkbox" id="skills-item4" class="child-checkbox">
+                        <label for="skills-item4">
+                            <span>Microcontroller and processor</span>
+                        </label>
+                        
+                        <input type="checkbox" id="skills-item5" class="child-checkbox">
+                        <label for="skills-item5">
+                            <span>Operating system</span>
+                        </label>
                     </div>
                 </div>
 
                 <div class="menu-item">
-                    <input type="checkbox" id="menu-item4">
+                    <input type="checkbox" id="menu-item4" class="parent-checkbox">
                     <label for="menu-item4">
+                        <span class="bar"></span>
                         <span>Experience</span>
                     </label>
                 </div>
 
                 <div class="menu-item">
-                    <input type="checkbox" id="menu-item5">
+                    <input type="checkbox" id="menu-item5" class="parent-checkbox">
                     <label for="menu-item5">
+                        <span class="bar"></span>
                         <span>Contact Me</span>
                     </label>
+                </div>
+
+                <div class="menu-item">
+                        <div class="logo-container">
+                            <a href="https://github.com/Dollar0712" style="color: #111827;">
+                                <img src="./images/icons/github.png" class="logo">
+                            </a>
+                        </div>
+                        <div class="logo-container">
+                            <a href="https://www.linkedin.com/in/kevin-zhang-5a06a8181 " style="color: #111827;">
+                                <img src="./images/icons/linkedin.png" class="logo">
+                            </a>
+                        </div>
                 </div>
             </div>          
             
@@ -121,9 +166,9 @@
                 <h1>Skills</h1>
             </div>
             <div class="cards">
-                <div class="item">
+                <div class="item" id="programming_language">
                     <div class="front">
-                        <img src="./icons/programming-language.png" alt="Programming language icon" style="width: 9.459vw; height: 9.459vw;">
+                        <img src="./images/icons/programming-language.png" alt="Programming language icon" style="width: 9.459vw; height: 9.459vw;">
                         <h3>Programming language</h3>
                     </div>
                     <div class="back">
@@ -136,9 +181,9 @@
                     </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="interfaces_and_protocols">
                     <div class="front">
-                        <img src="./icons/Interfaces-and-protocols.png" alt="Interfaces and protocols icon" style="width: 9.459vw; height: 9.459vw;">
+                        <img src="./images/icons/Interfaces-and-protocols.png" alt="Interfaces and protocols icon" style="width: 9.459vw; height: 9.459vw;">
                         <h3>Interfaces and protocols</h3>
                     </div>
                     <div class="back">
@@ -154,9 +199,9 @@
                     </div>
                 </div>
                 
-                <div class="item">
+                <div class="item" id="development_tools">
                     <div class="front">
-                        <img src="./icons/Development-tools.png" alt="Development tools icon" style="width: 9.459vw; height: 9.459vw;">
+                        <img src="./images/icons/Development-tools.png" alt="Development tools icon" style="width: 9.459vw; height: 9.459vw;">
                         <h3>Development tools</h3>
                     </div>
                     <div class="back">
@@ -171,9 +216,9 @@
                     </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="microcontroller_and_processor">
                     <div class="front">
-                        <img src="./icons/cpu.png" alt="Microcontroller and processor icon" style="width: 9.459vw; height: 9.459vw;">
+                        <img src="./images/icons/cpu.png" alt="Microcontroller and processor icon" style="width: 9.459vw; height: 9.459vw;">
                         <h3>Microcontroller and processor</h3>
                     </div>
                     <div class="back">
@@ -185,9 +230,9 @@
                     </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="operating_system">
                     <div class="front">
-                        <img src="./icons/Operating-system.png" alt="Operating system icon" style="width: 9.459vw; height: 9.459vw;">
+                        <img src="./images/icons/Operating-system.png" alt="Operating system icon" style="width: 9.459vw; height: 9.459vw;">
                         <h3>Operating system</h3>
                     </div>
                     <div class="back">
@@ -233,9 +278,9 @@
                 </div>
             </div>
                 
-            <video class="video-player" preload="metadata" src="./css/Energybot.mp4" controls autoplay loop muted>
-                <source src="./css/Energybot.mp4", type="video/mp4">
-                <source src="./css/Energybot.ogg" type="video/ogg">
+            <video class="video-player" preload="metadata" src="./files/Energybot.mp4" controls autoplay loop muted>
+                <source src="./files/Energybot.mp4", type="video/mp4">
+                <source src="./files/Energybot.ogg" type="video/ogg">
             </video>
             
             <div class="content-box">
@@ -254,9 +299,9 @@
 
             <div class="mini-dyno-image">
                 <div id="mini-dyno-image-1"></div>
-                <video id="mini-dyno-video-player" preload="metadata" src="./css/mini-dyno.mp4" controls autoplay loop muted>
-                    <source src="./css/mini-dyno.mp4", type="video/mp4">
-                    <source src="./css/mini-dyno.ogg" type="video/ogg">
+                <video id="mini-dyno-video-player" preload="metadata" src="./files/mini-dyno.mp4" controls autoplay loop muted>
+                    <source src="./files/mini-dyno.mp4", type="video/mp4">
+                    <source src="./files/mini-dyno.ogg" type="video/ogg">
                 </video>
             </div>
 
@@ -284,24 +329,24 @@
                 <div class="external-link">
                     <div class="link">
                         <a href="https://github.com/Dollar0712" style="color: #111827;">
-                            <img src="./icons/github.png" style="width: 6.831vw; height: 6.831vw;">
+                            <img src="./images/icons/github.png" style="width: 6.831vw; height: 6.831vw;">
                         </a>
                         <div id="github">
                             <a href="https://github.com/Dollar0712" style="color: #111827;">GitHub</a>
                             <a href="https://github.com/Dollar0712">
-                                <img src="./icons/external-link.png" style="width: 1.419vw; height: 1.419vw;">
+                                <img src="./images/icons/external-link.png" style="width: 1.419vw; height: 1.419vw;">
                             </a>
                         </div>
                     </div>
 
                     <div class="link">
                         <a href="https://www.linkedin.com/in/kevin-zhang-5a06a8181 " style="color: #111827;">
-                            <img src="./icons/linkedin.png" alt="Operating system icon" style="width: 6.831vw; height: 6.831vw;">
+                            <img src="./images/icons/linkedin.png" style="width: 6.831vw; height: 6.831vw;">
                         </a>
                         <div id="linkedin">
                             <a href="https://www.linkedin.com/in/kevin-zhang-5a06a8181 " style="color: #111827;">Linkedin</a>
                             <a href="https://www.linkedin.com/in/kevin-zhang-5a06a8181 " style="color: #111827;">
-                                <img src="./icons/external-link.png" style="width: 1.419vw; height: 1.419vw;">
+                                <img src="./images/icons/external-link.png" style="width: 1.419vw; height: 1.419vw;">
                             </a>
                         </div>
                     </div>
@@ -312,80 +357,6 @@
     </div>
     
 
-    <script>
-        document.body.style.zoom="100%";
-        var homecheckbox = document.getElementById('menu-item1');
-        var homeContent = document.querySelector('.home'); 
-        
-        var aboutcheckbox = document.getElementById('menu-item2');
-        var aboutContent = document.querySelector('.about-me'); 
-
-        var skillcheckbox = document.getElementById('menu-item3');
-        var skillContent = document.querySelector('.skills'); 
-
-        var experiencecheckbox = document.getElementById('menu-item4');
-        var experienceContent = document.querySelector('.experience'); 
-
-        var contactcheckbox = document.getElementById('menu-item5');
-        var contactContent = document.querySelector('.contact-me'); 
-
-
-        function hideAllContent() {
-            homeContent.style.display = 'none';
-            aboutContent.style.display = 'none';
-            skillContent.style.display = 'none';
-            experienceContent.style.display = 'none';
-            contactContent.style.display = 'none';
-        }
-
-        function toHome() {
-            hideAllContent();
-            homeContent.style.display = 'flex';
-        }
-        
-        function toAbout() {
-            hideAllContent();
-            aboutContent.style.display = 'flex';
-        }
-
-        function toSkill() {
-            hideAllContent();
-            skillContent.style.display = 'flex';
-        }
-
-        function toExperience() {
-            hideAllContent();
-            experienceContent.style.display = 'flex';
-        }
-
-        function toContact() {
-            hideAllContent();
-            contactContent.style.display = 'flex';
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-
-            homecheckbox.addEventListener('change', function() {
-                toHome();
-            });
-
-            aboutcheckbox.addEventListener('change', function() {
-                toAbout();
-            });
-
-            skillcheckbox.addEventListener('change', function() {
-                toSkill();
-            });
-
-            experiencecheckbox.addEventListener('change', function() {
-                toExperience();
-            });
-
-            contactcheckbox.addEventListener('change', function() {
-                toContact();
-            });
-        });
-
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
