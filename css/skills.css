@@ -25,10 +25,10 @@
 }
 
 .skills .cards .item {
-    height: 568px;
-    width: 593px;
+    height: 29.848vw;
+    width: 31.161vw;
     position: relative;
-    perspective: 1000px;
+    perspective: 52.549vw;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -61,7 +61,7 @@
 
 .skills .cards .item .front h3 {
     color: #F0F0F0;
-    font-size: 32px;
+    font-size: 1.682vw;
     font-weight: 700;
     width: 60%;
     text-align: center;
@@ -84,7 +84,7 @@
 
 .skills .cards .item .back h3 {
     color: #F0F0F0;
-    font-size: 32px;
+    font-size: 1.682vw;
     font-weight: 700;
     text-align: left;
     margin-left: 5%;
@@ -94,7 +94,7 @@
 
 .skills .cards .item .back li {
     color: #F0F0F0;
-    font-size: 28px;
+    font-size: 1.471vw;
     font-weight: 600;
     text-align: left;
     margin-left: 10%;

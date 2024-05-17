@@ -26,7 +26,7 @@
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    font-size: 24px;
+    font-size: 1.261vw;
     font-weight: 700;
     position: fixed;
     width: var(--menu-box-width);
@@ -51,8 +51,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.525vw;
+    padding-bottom: 0.525vw;
 }
 
 .menu-box .menu .menu-item label {
@@ -80,7 +80,7 @@
 }
 
 .menu-box .menu .menu-item:first-child {
-    margin-top: 100px;
+    margin-top: 5.255vw;
 }
 
 .menu-box .menu .menu-item:nth-last-child(2) {
@@ -91,33 +91,33 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 10px; /* 图标之间的间距 */
+    gap: 0.525vw;
 }
 
 .menu-box .menu .menu-item .logo-container {
     display: flex;
-    width: 50px;
-    height: 50px;
+    width: 2.627vw;
+    height: 2.627vw;
     
     justify-content: center;
 }
 
 .menu-box .menu .menu-item .logo-container .logo {
-    width: 100%; /* 确保图标适当缩小，留出内边距 */
+    width: 100%; 
     height: 100%;
 }
 
 .menu-box .menu .menu-item label .bar {
-    width: 5px; /* 竖条的宽度 */
-    height: 27px; /* 竖条的高度 */
-    background-color: var(--color-menu-bg); /* 默认竖条的颜色 */
-    border-radius: 12px;
-    margin-right: 8px; /* 竖条和文字之间的间距 */
-    transition: background-color var(--transition-menu-time); /* 颜色变化的过渡效果 */
+    width: 0.263vw; 
+    height: 1.419vw;
+    background-color: var(--color-menu-bg); 
+    border-radius: 0.631vw;
+    margin-right: 0.42vw; 
+    transition: background-color var(--transition-menu-time); 
 }
 
 .menu-box .menu .menu-item input[type="checkbox"]:checked+label .bar {
-    background-color: var(--font-color-mi-hover); /* 选中后竖条的颜色 */
+    background-color: var(--font-color-mi-hover); 
 }
 
 .menu-box .menu .menu-item input:checked+label span {
@@ -129,7 +129,7 @@
 }
 
 .menu-box .menu .menu-item .menu-item-content {
-    font-size: 20px;
+    font-size: 1.051vw;
     font-weight: 700;
     align-self: center;
     width: 80%;
@@ -144,20 +144,20 @@
 
 .menu-box .menu .menu-item .menu-item-content span {
     width: 100%;
-    font-size: 20px;
+    font-size: 1.051vw;
     cursor: pointer;
 }
 
 .menu-box .menu .menu-item .menu-item-content span:first-child {
-    margin-top: 10px;
+    margin-top: 0.525vw;
 }
 
 .menu-box .menu .menu-item input#menu-item2:checked~.menu-item-content {
-    height: calc(2 * 50px);
+    height: calc(2 * 2.627vw);
 }
 
 .menu-box .menu .menu-item input#menu-item3:checked~.menu-item-content {
-    height: calc(5 * 60px);
+    height: calc(5 * 3.153vw);
 }
 
 
