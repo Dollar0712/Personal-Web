@@ -137,6 +137,7 @@ function toContact() {
     contactContent.style.display = 'flex';
 }
 
+// Direct to page via check box click
 document.addEventListener('DOMContentLoaded', function() {
 
     homecheckbox.addEventListener('change', function() {
