@@ -1,5 +1,5 @@
 
-// Change page variables
+// Global variables for page change
 var homecheckbox = document.getElementById('menu-item1');
 var homeContent = document.querySelector('.home'); 
 
@@ -16,7 +16,7 @@ var contactcheckbox = document.getElementById('menu-item5');
 var contactContent = document.querySelector('.contact-me'); 
 
 
-// Scroll to content variables
+// Global variables for "scroll to content" 
 var aboutmeitem1checkbox = document.getElementById('about-me-item1');
 var aboutmeitem1content = document.getElementById('about-myself');
 
